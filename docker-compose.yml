@@ -22,7 +22,7 @@ services:
     container_name: ${PROJECT_NAME}_postgres
     image: postgres:14.11-alpine
     ports:
-      - "5439:5432"
+      - "${DB_PORT}:5432"
     restart: always
     volumes:
       - pgdata:/var/lib/postgresql@14/data:rw
